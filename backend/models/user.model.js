@@ -30,8 +30,12 @@ User.init(
             allowNull: true,
         },
         gender: {
-            type: DataTypes.STRING, // You can use ENUM or other data types for gender
+            type: DataTypes.ENUM('Male', 'Female', 'Other'),
             allowNull: true,
+        },
+        role: {
+            type: DataTypes.ENUM('admin', 'user'),
+            defaultValue: 'user'
         },
         preferredLanguage: {
             type: DataTypes.STRING,

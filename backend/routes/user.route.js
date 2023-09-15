@@ -1,5 +1,5 @@
 const express = require('express');
-const UserController = require('../controllers/user.cotroller');
+const UserController = require('../controllers/user.controller');
 
 
 
@@ -13,6 +13,7 @@ class UserRouter {
         this.router.get('/', UserController.getAllUsers)
         this.router.post('/register', UserController.registeringUser)
         this.router.post('/phone-login', UserController.phoneLogin)
+        this.router.post('/verify', UserController.verifyingOtp)
     }
 
 
